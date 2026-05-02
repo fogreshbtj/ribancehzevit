@@ -189,14 +189,11 @@ input,select,textarea{
   flex-shrink:0;
 }
 
-.pengikut-group{
-  margin-bottom:14px;
-}
-
 .pengikut-group label{
   display:block;
   font-weight:600;
   margin-bottom:8px;
+  padding-left:12px;
 }
 
 .pengikut-row{
@@ -209,9 +206,16 @@ input,select,textarea{
 
 .pengikut-row span{
   flex:1;
-  font-size:14px;
+  font-size:13px;
+  padding-left:12px;
 }
 
 .pengikut-row input{
   width:90px;
+}
+
+.form-card input,
+.form-card select,
+.pengikut-group{
+  margin-bottom:15px;
 }
