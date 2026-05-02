@@ -17,6 +17,8 @@ function cekForm() {
   const relasi = document.getElementById("relasi").value.trim();
   const wbp = document.getElementById("wbp").value.trim();
 
+  const nikValid = /^\d{16}$/.test(nik);
+
   if (!btnDaftar) return;
 
   btnDaftar.disabled = !(nik && nama && gender && relasi && wbp);
