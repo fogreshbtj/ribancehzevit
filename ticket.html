@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiket Kunjungan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="ticket-page">
+    <div class="ticket-card">
+
+      <div class="ticket-header">
+        <h1>Tiket Kunjungan</h1>
+        <p>Zero Contact Visit</p>
+      </div>
+
+      <div class="ticket-number" id="ticket-id"></div>
+
+      <div class="ticket-detail" id="ticket-detail"></div>
+
+      <canvas id="ticket-qr"></canvas>
+
+      <a class="button" href="index.html">Kembali ke Dashboard</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="js/ticket.js"></script>
+</body>
+</html>
