@@ -175,8 +175,16 @@ input,select,textarea{
   margin-bottom:28px;
 }
 
+.brand-wrap{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:28px;
+}
+
 .logo{
-  width:42px;
-  height:42px;
+  width:clamp(56px, 6vw, 74px);
+  height:clamp(56px, 6vw, 74px);
   object-fit:contain;
+  flex-shrink:0;
 }
