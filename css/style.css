@@ -170,14 +170,14 @@ input,select,textarea{
 
 .brand-wrap{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap:12px;
   margin-bottom:28px;
 }
 
 .brand-wrap{
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   gap:14px;
   margin-bottom:28px;
 }
