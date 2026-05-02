@@ -6,7 +6,6 @@ function booking() {
     nama: document.getElementById("nama").value,
     nik: document.getElementById("nik").value,
     wbp: document.getElementById("wbp").value,
-    jam: document.getElementById("jam").value,
     status: "BOOKED"
   };
 
