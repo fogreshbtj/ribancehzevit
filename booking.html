@@ -12,10 +12,49 @@
       <h1>Pendaftaran Kunjungan</h1>
       <p>Silakan isi data pengunjung.</p>
 
-      <input id="nama" placeholder="Nama lengkap">
       <input id="nik" placeholder="NIK">
-      <input id="wbp" list="wbp-list" placeholder="Nama WBP">
-      <datalist id="wbp-list"></datalist>
+
+<input id="nama" placeholder="Nama Pengunjung">
+
+<select id="gender">
+  <option value="">Jenis Kelamin</option>
+  <option value="Laki-Laki">Laki-Laki</option>
+  <option value="Perempuan">Perempuan</option>
+</select>
+
+<select id="relasi">
+  <option value="">Relasi</option>
+  <option value="Ayah">Ayah</option>
+  <option value="Ibu">Ibu</option>
+  <option value="Adik">Adik</option>
+  <option value="Kakak">Kakak</option>
+  <option value="Saudara Jauh">Saudara Jauh</option>
+  <option value="Suami/Istri">Suami/Istri</option>
+  <option value="Anak">Anak</option>
+  <option value="Teman">Teman</option>
+</select>
+
+<div class="pengikut-group">
+  <label>Pengikut</label>
+
+  <div class="pengikut-row">
+    <span>Laki-Laki</span>
+    <input id="ikut_l" type="number" min="0" value="0">
+  </div>
+
+  <div class="pengikut-row">
+    <span>Perempuan</span>
+    <input id="ikut_p" type="number" min="0" value="0">
+  </div>
+
+  <div class="pengikut-row">
+    <span>Anak-Anak</span>
+    <input id="ikut_a" type="number" min="0" value="0">
+  </div>
+</div>
+
+<input id="wbp" list="wbp-list" placeholder="Nama WBP">
+<datalist id="wbp-list"></datalist>
 
       <button class="button" onclick="booking()">Daftarkan</button>
 
