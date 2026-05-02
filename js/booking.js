@@ -63,17 +63,10 @@ function booking() {
   };
 
   data.push(newData);
-  localStorage.setItem("booking", JSON.stringify(data));
+localStorage.setItem("booking", JSON.stringify(data));
+localStorage.setItem("ticket", JSON.stringify(newData));
 
-  QRCode.toCanvas(qrCanvas, JSON.stringify(newData), function(error) {
-    if (error) return;
-
-    btnDaftar.disabled = true;
-    btnDaftar.textContent = "Sudah Terdaftar";
-
-    kunciForm();
-
-    alert("Pendaftaran berhasil");
+window.location.href = "ticket.html";
   });
 }
 
