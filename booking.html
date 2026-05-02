@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pendaftaran</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="form-page">
+    <div class="form-card">
+      <h1>Pendaftaran Kunjungan</h1>
+      <p>Silakan isi data pengunjung.</p>
+
+      <input id="nama" placeholder="Nama lengkap">
+      <input id="nik" placeholder="NIK">
+      <input id="wbp" placeholder="Nama WBP">
+
+      <select id="jam">
+        <option>08:00</option>
+        <option>09:00</option>
+        <option>10:00</option>
+      </select>
+
+      <button class="button" onclick="booking()">Daftarkan</button>
+
+      <canvas id="qr"></canvas>
+
+      <a class="backlink" href="index.html">← Kembali ke dashboard</a>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
