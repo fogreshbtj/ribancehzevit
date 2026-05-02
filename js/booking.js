@@ -1,6 +1,5 @@
 const wbpList = document.getElementById("wbp-list");
 const btnDaftar = document.getElementById("btn-daftar");
-const qrCanvas = document.getElementById("qr");
 
 if (wbpList && typeof daftarWBP !== "undefined") {
   daftarWBP.forEach(nama => {
@@ -21,7 +20,7 @@ function cekForm() {
 
   if (!btnDaftar) return;
 
-  btnDaftar.disabled = !(nik && nama && gender && relasi && wbp);
+  btnDaftar.disabled = !(nikValid && nama && gender && relasi && wbp);
 }
 
 ["nik", "nama", "gender", "relasi", "wbp"].forEach(id => {
@@ -31,14 +30,6 @@ function cekForm() {
     el.addEventListener("change", cekForm);
   }
 });
-
-function kunciForm() {
-  ["nik", "nama", "gender", "relasi", "ikut_l", "ikut_p", "ikut_a", "wbp"]
-    .forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.disabled = true;
-    });
-}
 
 function booking() {
   cekForm();
@@ -63,11 +54,11 @@ function booking() {
   };
 
   data.push(newData);
-localStorage.setItem("booking", JSON.stringify(data));
-localStorage.setItem("ticket", JSON.stringify(newData));
 
-window.location.href = "ticket.html";
-  });
+  localStorage.setItem("booking", JSON.stringify(data));
+  localStorage.setItem("ticket", JSON.stringify(newData));
+
+  window.location.href = "ticket.html";
 }
 
 cekForm();
