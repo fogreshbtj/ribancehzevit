@@ -240,3 +240,7 @@ input,select,textarea{
   }
 
 }
+
+.form-card select{
+  padding-right:36px;
+}
