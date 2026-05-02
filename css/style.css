@@ -243,10 +243,8 @@ input,select,textarea{
 
 .form-card select{
   width:100%;
-  padding:12px 42px 12px 12px;
+  padding:12px 45px 12px 12px;
   box-sizing:border-box;
-  -webkit-appearance:none;
-  appearance:none;
   background-position:right 14px center;
   background-repeat:no-repeat;
 }
