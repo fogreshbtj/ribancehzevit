@@ -258,26 +258,34 @@ input,select,textarea{
 .ticket-card{
   width:100%;
   max-width:460px;
-  background:#fff;
-  border-radius:20px;
-  padding:24px;
-  box-shadow:0 8px 24px rgba(0,0,0,.08);
+  background:#ffffff;
+  border-radius:22px;
+  padding:24px 20px;
+  box-shadow:0 10px 28px rgba(0,0,0,.08);
 }
 
 .ticket-header{
   text-align:center;
-  margin-bottom:18px;
+  margin-bottom:10px;
 }
 
 .ticket-header h1{
-  font-size:22px;
   margin:0;
+  font-size:22px;
 }
 
 .ticket-header p{
-  font-size:14px;
-  opacity:.7;
   margin-top:4px;
+  font-size:13px;
+  opacity:.7;
+}
+
+.ticket-badge{
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  margin-bottom:12px;
 }
 
 .ticket-number{
@@ -289,12 +297,39 @@ input,select,textarea{
 
 .ticket-detail{
   display:grid;
-  gap:8px;
+  gap:10px;
+  margin-bottom:20px;
+}
+
+.ticket-row{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
   font-size:14px;
-  margin-bottom:22px;
+}
+
+.ticket-row span{
+  opacity:.7;
+}
+
+.ticket-row strong{
+  text-align:right;
+  max-width:58%;
+}
+
+.ticket-qr-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:14px;
+}
+
+.ticket-note{
+  text-align:center;
+  font-size:12px;
+  opacity:.65;
+  margin-bottom:16px;
 }
 
 #ticket-qr{
   display:block;
-  margin:0 auto 20px auto;
 }
