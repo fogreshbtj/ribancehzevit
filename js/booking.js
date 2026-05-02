@@ -1,3 +1,13 @@
+const wbpList = document.getElementById("wbp-list");
+
+if (wbpList && typeof daftarWBP !== "undefined") {
+  daftarWBP.forEach(nama => {
+    const option = document.createElement("option");
+    option.value = nama;
+    wbpList.appendChild(option);
+  });
+}
+
 function booking() {
   const data = JSON.parse(localStorage.getItem("booking")) || [];
 
