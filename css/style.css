@@ -248,3 +248,53 @@ input,select,textarea{
   background-position:right 14px center;
   background-repeat:no-repeat;
 }
+
+  .ticket-page{
+  padding:24px 16px;
+  display:flex;
+  justify-content:center;
+}
+
+.ticket-card{
+  width:100%;
+  max-width:460px;
+  background:#fff;
+  border-radius:20px;
+  padding:24px;
+  box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.ticket-header{
+  text-align:center;
+  margin-bottom:18px;
+}
+
+.ticket-header h1{
+  font-size:22px;
+  margin:0;
+}
+
+.ticket-header p{
+  font-size:14px;
+  opacity:.7;
+  margin-top:4px;
+}
+
+.ticket-number{
+  text-align:center;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:18px;
+}
+
+.ticket-detail{
+  display:grid;
+  gap:8px;
+  font-size:14px;
+  margin-bottom:22px;
+}
+
+#ticket-qr{
+  display:block;
+  margin:0 auto 20px auto;
+}
