@@ -1,4 +1,6 @@
 const wbpList = document.getElementById("wbp-list");
+const btnDaftar = document.getElementById("btn-daftar");
+const qrCanvas = document.getElementById("qr");
 
 if (wbpList && typeof daftarWBP !== "undefined") {
   daftarWBP.forEach(nama => {
@@ -15,9 +17,9 @@ function cekForm() {
   const relasi = document.getElementById("relasi").value.trim();
   const wbp = document.getElementById("wbp").value.trim();
 
-  const btn = document.getElementById("btn-daftar");
+  if (!btnDaftar) return;
 
-  btn.disabled = !(nik && nama && gender && relasi && wbp);
+  btnDaftar.disabled = !(nik && nama && gender && relasi && wbp);
 }
 
 ["nik", "nama", "gender", "relasi", "wbp"].forEach(id => {
@@ -28,38 +30,49 @@ function cekForm() {
   }
 });
 
-function booking() {
-  const btn = document.getElementById("btn-daftar");
+function kunciForm() {
+  ["nik", "nama", "gender", "relasi", "ikut_l", "ikut_p", "ikut_a", "wbp"]
+    .forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.disabled = true;
+    });
+}
 
-  if (btn.disabled) return;
+function booking() {
+  cekForm();
+
+  if (!btnDaftar || btnDaftar.disabled) return;
 
   const data = JSON.parse(localStorage.getItem("booking")) || [];
 
   const newData = {
     id: "ZV-" + Date.now(),
-    nik: document.getElementById("nik").value,
-    nama: document.getElementById("nama").value,
+    nik: document.getElementById("nik").value.trim(),
+    nama: document.getElementById("nama").value.trim(),
     gender: document.getElementById("gender").value,
     relasi: document.getElementById("relasi").value,
     pengikut: {
-      laki_laki: document.getElementById("ikut_l").value,
-      perempuan: document.getElementById("ikut_p").value,
-      anak: document.getElementById("ikut_a").value
+      laki_laki: document.getElementById("ikut_l").value || "0",
+      perempuan: document.getElementById("ikut_p").value || "0",
+      anak: document.getElementById("ikut_a").value || "0"
     },
-    wbp: document.getElementById("wbp").value,
+    wbp: document.getElementById("wbp").value.trim(),
     status: "BOOKED"
   };
 
   data.push(newData);
   localStorage.setItem("booking", JSON.stringify(data));
 
-  QRCode.toCanvas(
-    document.getElementById("qr"),
-    JSON.stringify(newData)
-  );
+  QRCode.toCanvas(qrCanvas, JSON.stringify(newData), function(error) {
+    if (error) return;
 
-  btn.disabled = true;
-  btn.textContent = "Sudah Terdaftar";
+    btnDaftar.disabled = true;
+    btnDaftar.textContent = "Sudah Terdaftar";
 
-  alert("Pendaftaran berhasil");
+    kunciForm();
+
+    alert("Pendaftaran berhasil");
+  });
 }
+
+cekForm();
