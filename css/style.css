@@ -167,3 +167,16 @@ input,select,textarea{
     margin-left:0;
   }
 }
+
+.brand-wrap{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:28px;
+}
+
+.logo{
+  width:42px;
+  height:42px;
+  object-fit:contain;
+}
