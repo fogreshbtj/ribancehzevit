@@ -31,6 +31,20 @@ function cekForm() {
   }
 });
 
+function showToast(message, type = "error") {
+  const toast = document.getElementById("toast");
+  if (!toast) return;
+
+  toast.textContent = message;
+  toast.className = `toast show ${type}`;
+
+  clearTimeout(window.toastTimer);
+
+  window.toastTimer = setTimeout(() => {
+    toast.className = "toast";
+  }, 2200);
+}
+
 function booking() {
   cekForm();
 
