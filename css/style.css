@@ -367,3 +367,54 @@ input,select,textarea{
 .toast.success{
   background:#0b5cab;
 }
+
+.movie-ticket{
+  width:100%;
+  max-width:460px;
+  background:#fff;
+  border-radius:24px;
+  padding:22px 18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.10);
+  position:relative;
+}
+
+.movie-head{
+  text-align:center;
+  margin-bottom:14px;
+}
+
+.movie-title{
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:.03em;
+}
+
+.movie-subtitle{
+  font-size:12px;
+  opacity:.65;
+  margin-top:4px;
+}
+
+.ticket-strip{
+  border-top:2px dashed #d5dbe3;
+  margin:14px 0;
+}
+
+.movie-number{
+  text-align:center;
+  font-size:18px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+
+.movie-detail{
+  display:grid;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.movie-qr{
+  display:flex;
+  justify-content:center;
+  margin-bottom:18px;
+}
