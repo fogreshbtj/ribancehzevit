@@ -8,27 +8,31 @@
 </head>
 <body>
   <main class="ticket-page">
-    <div class="movie-ticket">
+    <section class="jkn-ticket">
 
-      <div class="movie-head">
-        <div class="movie-title">RIBANCEH ZEVIT</div>
-        <div class="movie-subtitle">ZERO CONTACT VISIT</div>
+      <div class="jkn-top">
+        <div class="jkn-brand">RIBANCEH ZEVIT</div>
+        <div class="jkn-sub">Zero Contact Visit</div>
       </div>
 
-      <div class="ticket-strip"></div>
+      <div class="jkn-status">TIKET KUNJUNGAN AKTIF</div>
 
-      <div class="movie-number" id="ticket-id"></div>
+      <div class="jkn-number" id="ticket-id"></div>
 
-      <div class="movie-detail" id="ticket-detail"></div>
+      <div class="jkn-detail" id="ticket-detail"></div>
 
-      <div class="ticket-strip"></div>
+      <div class="jkn-divider"></div>
 
-      <div class="movie-qr">
+      <div class="jkn-qr-wrap">
         <canvas id="ticket-qr"></canvas>
       </div>
 
+      <div class="jkn-note">
+        Tunjukkan tiket ini saat verifikasi kunjungan
+      </div>
+
       <a class="button" href="index.html">Kembali ke Dashboard</a>
-    </div>
+    </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
