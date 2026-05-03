@@ -46,24 +46,36 @@ function showToast(message, type = "error") {
 }
 
 function booking() {
-  cekForm();
+  const nik = document.getElementById("nik").value.trim();
+  const nama = document.getElementById("nama").value.trim();
+  const gender = document.getElementById("gender").value.trim();
+  const relasi = document.getElementById("relasi").value.trim();
+  const wbp = document.getElementById("wbp").value.trim();
 
-  if (!btnDaftar || btnDaftar.disabled) return;
+  if (nik && !/^\d{16}$/.test(nik)) {
+    showToast("NIK Belum Lengkap");
+    return;
+  }
+
+  if (!nik || !nama || !gender || !relasi || !wbp) {
+    showToast("Mohon Lengkapi Data");
+    return;
+  }
 
   const data = JSON.parse(localStorage.getItem("booking")) || [];
 
   const newData = {
     id: "ZV-" + Date.now(),
-    nik: document.getElementById("nik").value.trim(),
-    nama: document.getElementById("nama").value.trim(),
-    gender: document.getElementById("gender").value,
-    relasi: document.getElementById("relasi").value,
+    nik,
+    nama,
+    gender,
+    relasi,
     pengikut: {
       laki_laki: document.getElementById("ikut_l").value || "0",
       perempuan: document.getElementById("ikut_p").value || "0",
       anak: document.getElementById("ikut_a").value || "0"
     },
-    wbp: document.getElementById("wbp").value.trim(),
+    wbp,
     status: "BOOKED"
   };
 
