@@ -418,3 +418,96 @@ input,select,textarea{
   justify-content:center;
   margin-bottom:18px;
 }
+
+.jkn-ticket{
+  width:100%;
+  max-width:460px;
+  background:#ffffff;
+  border-radius:24px;
+  padding:22px 18px 24px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  border:1px solid #edf1f5;
+}
+
+.jkn-top{
+  text-align:center;
+  margin-bottom:12px;
+}
+
+.jkn-brand{
+  font-size:22px;
+  font-weight:800;
+  color:#0b2a4a;
+  letter-spacing:.02em;
+}
+
+.jkn-sub{
+  font-size:13px;
+  color:#667085;
+  margin-top:4px;
+}
+
+.jkn-status{
+  text-align:center;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color:#0b5cab;
+  background:#eef5fd;
+  padding:8px 10px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+
+.jkn-number{
+  text-align:center;
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:18px;
+}
+
+.jkn-detail{
+  display:grid;
+  gap:10px;
+}
+
+.jkn-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  font-size:14px;
+}
+
+.jkn-row span{
+  color:#667085;
+  flex:1;
+}
+
+.jkn-row strong{
+  text-align:right;
+  max-width:58%;
+  font-weight:600;
+}
+
+.jkn-divider{
+  border-top:1px dashed #d9e2ec;
+  margin:18px 0;
+}
+
+.jkn-qr-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:14px;
+}
+
+#ticket-qr{
+  display:block;
+}
+
+.jkn-note{
+  text-align:center;
+  font-size:12px;
+  color:#667085;
+  margin-bottom:18px;
+}
