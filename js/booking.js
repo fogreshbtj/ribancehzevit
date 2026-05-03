@@ -10,17 +10,8 @@ if (wbpList && typeof daftarWBP !== "undefined") {
 }
 
 function cekForm() {
-  const nik = document.getElementById("nik").value.trim();
-  const nama = document.getElementById("nama").value.trim();
-  const gender = document.getElementById("gender").value.trim();
-  const relasi = document.getElementById("relasi").value.trim();
-  const wbp = document.getElementById("wbp").value.trim();
-
-  const nikValid = /^\d{16}$/.test(nik);
-
   if (!btnDaftar) return;
-
-  btnDaftar.disabled = !(nikValid && nama && gender && relasi && wbp);
+  btnDaftar.disabled = false;
 }
 
 ["nik", "nama", "gender", "relasi", "wbp"].forEach(id => {
